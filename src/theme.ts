@@ -1,10 +1,12 @@
 export const colors = {
-  background: '#14141C',
-  surface: '#22222E',
-  primary: '#EF4444',
-  text: '#FFFFFF',
-  muted: '#A0A0B8',
-  border: '#33334A',
+  background: '#F4F4F4',
+  surface: '#FFFFFF',
+  primary: '#DC0A2D',
+  text: '#212121',
+  muted: '#6B6B6B',
+  border: '#E0E0E0',
+  primaryDark: '#A30820',
+  lens: '#2D9CDB',
 };
 
 export const typeColors: Record<string, string> = {

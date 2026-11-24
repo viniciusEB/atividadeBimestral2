@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { Pressable, Text } from 'react-native';
+import { Pressable, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Lista from './src/screens/Lista/Lista';
@@ -19,9 +19,10 @@ export default function App() {
         <Stack.Navigator
           initialRouteName="Lista"
           screenOptions={{
-            headerStyle: { backgroundColor: colors.surface },
-            headerTintColor: colors.text,
-            headerTitleStyle: { fontWeight: 'bold' },
+            headerStyle: { backgroundColor: colors.primary },
+            headerTintColor: '#FFFFFF',
+            headerTitleStyle: { fontWeight: 'bold', color: '#FFFFFF' },
+            headerShadowVisible: false,
             contentStyle: { backgroundColor: colors.background },
           }}
         >
@@ -31,7 +32,15 @@ export default function App() {
             options={({ navigation }) => ({
               title: 'Pokédex',
               headerRight: () => (
-                <Pressable onPress={() => navigation.navigate('Favoritos')}>
+                <Pressable
+                  onPress={() => navigation.navigate('Favoritos')}
+                  style={{
+                    backgroundColor: '#FFFFFF',
+                    paddingHorizontal: 12,
+                    paddingVertical: 6,
+                    borderRadius: 16,
+                  }}
+                >
                   <Text style={{ color: colors.primary, fontWeight: 'bold' }}>
                     ♥ Favoritos
                   </Text>
